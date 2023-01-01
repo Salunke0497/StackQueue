@@ -60,5 +60,23 @@ namespace stack
             Console.WriteLine("Value Poped is {0}", this.headtop.data);
             this.headtop = this.headtop.next;
         }
+        internal void Enqueue(int data)
+        {
+            Node node = new Node(data);
+            if (this.headtop == null)
+            {
+                this.headtop = node;
+            }
+            else
+            {
+                Node temp = headtop;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+            Console.WriteLine("{0} inserted into Linked List", node.data);
+        }
     }
 }
