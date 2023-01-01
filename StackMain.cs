@@ -28,5 +28,37 @@ namespace stack
             this.headtop = node;
             Console.WriteLine("added the stack value " + value);
         }
+        public void Display()
+        {
+            Node temp = this.headtop;
+            if (temp == null)
+            {
+                Console.WriteLine("stack list is empty");
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data + " ");
+                temp = temp.next;
+            }
+        }
+        internal void Peek()
+        {
+            if (this.headtop == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("{0} is in the top of stack", this.headtop.data);
+        }
+        internal void Pop()
+        {
+            if (this.headtop == null)
+            {
+                Console.WriteLine("Stack is empty,Deletion is not Possible");
+                return;
+            }
+            Console.WriteLine("Value Poped is {0}", this.headtop.data);
+            this.headtop = this.headtop.next;
+        }
     }
 }
