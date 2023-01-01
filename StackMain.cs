@@ -78,5 +78,17 @@ namespace stack
             }
             Console.WriteLine("{0} inserted into Linked List", node.data);
         }
+        internal void Dequeue()
+        {
+            if (this.headtop == null)
+            {
+                Console.WriteLine("\nQueue is Empty");
+            }
+            else
+            {
+                Console.Write("\n{0} Dequeued For Queue", this.headtop.data);
+                this.headtop = this.headtop.next;
+            }
+        }
     }
 }
