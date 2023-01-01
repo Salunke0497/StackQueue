@@ -43,11 +43,22 @@ namespace stack
             //        break;
             //}
 
+            //StackMain stack = new StackMain();
+            //stack.Push(56);
+            //stack.Push(30);
+            //stack.Push(70);
+            //Console.WriteLine("values are : ");
+            //stack.Display();
+            //Console.ReadLine();
+
             StackMain stack = new StackMain();
-            stack.Push(56);
-            stack.Push(30);
-            stack.Push(70);
-            Console.WriteLine("values are : ");
+            stack.Enqueue(56);
+            stack.Enqueue(30);
+            stack.Enqueue(70);
+            Console.WriteLine("\nQueue Sequence");
+            stack.Dequeue();
+            stack.Dequeue();
+            stack.Dequeue();
             stack.Display();
             Console.ReadLine();
         }
